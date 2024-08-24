@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Create</title>
+</head>
+
+<body>
+    <%- include('nav') %>
+        <div class="p-4 ">
+            <h1 class="text-xl mb-2 ">Create New Hisaab</h1>
+            <form action="/create/add" method="post">
+
+                <input type="text" class="max-w-[37rem] p-2 bg-gray-200 outline-blue-200" name="filename"
+                    placeholder="Enter Filename" id="">
+                <br>
+                <br>
+                <textarea class="p-3 resize-none bg-gray-200 outline-blue-300" name="data" id="" cols="80" rows="15"
+                    placeholder="Entry All Details"></textarea>
+                <br>
+                <input class="bg-red-200 p-3 mt-4 ml-[.2em] rounded " type="submit" value="Create">
+            </form>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>khatabook | project</title>
+</head>
+
+<body>
+    <%- include('nav') %>
+        <ul class="p-4">
+            <li class="text-lg font-normal underline mb-3">ALL HISAAB KITAAB</li>
+            <% filename.forEach((f)=>{ %>
+                <div
+                    class="bg-blue-500 gap-3 text-zinc-100 text-sm mb-2 flex items-center max-w-fit lg:max-w-[25%] lg:text-xl">
+                    <li class="font-semibold  p-2 ">
+                        <%= f.split(".")[0] %>
+                    </li>
+                    <a href="/read/<%= f%>"><i class="ri-arrow-right-circle-fill"></i></a>
+                    <a class="ml-auto" href="/update/<%= f %>"><i class="ri-edit-fill"></i></a>
+                    <a href="/delete/<%= f %>"><i class="ri-delete-bin-5-line shadow-md text-red-400 mr-3"></i></a>
+                </div>
+                <% }) %>
+        </ul>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Create</title>
+</head>
+
+<body>
+    <%- include('nav') %>
+        <div class="p-4 ">
+            <h1 class="text-xl mb-2 ">Update Hisaab <sub class="text-blue-500 uppercase">(<%= filename.split(".")[0] %>
+                        )</sub></h1>
+            <form action="/update/<%=filename%>/add" method="post">
+
+
+                <br>
+                <textarea class="p-3 resize-none outline-blue-300 bg-gray-300 rounded-md" name="newdata" id="" cols="80"
+                    rows="20" placeholder="Entry All Details"><%=data%></textarea>
+                <br>
+                <input class="bg-blue-300 p-3 mt-4 ml-[.5em] rounded " type="submit" value="Update Hisaab">
+            </form>
+        </div>
+</body>
+
+</html>

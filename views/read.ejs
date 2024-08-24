@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>khatabook | Read</title>
+</head>
+<body>
+    <%- include("nav") %>
+    <div class="h-[30%] m-[8%] max-w-[40%] p-4">
+       <h2>Here's Hisaab of <%= filename %></h2>
+       <a class="no-underline text-blue-400 " href="/update/<%= filename %>">Edit Hisaab</a>
+       <pre class="overflow-auto bg-gray-300 p-2 mt-[10%]"> <%= data %></pre>
+    </div>
+</body>
+</html>
